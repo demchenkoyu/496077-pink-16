@@ -38,9 +38,65 @@
     </nav>
     </header>
     <main class="page-main">
+      <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
       <form class="page-form" action="https://echo.htmlacademy.ru">
-      <h1 class="page-form__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    </form>
+        <div class="page-form__full-name">
+        <label class="page-form__label" for="surname">фамилия</label>
+        <input class="page-form__input" type="text" id="surname" placeholder=" Укажите фамилию *" required>
+        <label class="page-form__label" for="firstname">имя</label>
+        <input class="page-form__input" type="text" id="firstname" placeholder=" Введите ваше имя *" required>
+        <label class="page-form__label" for="secondname">отчество</label>
+        <input class="page-form__input" type="text" id="secondname" placeholder=" Ну и отчество тоже">
+      </div>
+      <div class="page-form__achievement">
+        <h2 class="page-form__tagline">ваши безбашенные достижения в путешествии</h2>
+        <label class="page-form__label page-form__label--less" for="selfie">
+          <input class="page-form__input" type="checkbox" name="selfie-shark" id="selfie" checked> Сделал селфи с акулой
+        </label>
+        <label class="page-form__label page-form__label--less" for="angry-sun">
+          <input class="page-form__input" type="checkbox" name="sunbase" id="angry-sun" checked> Обгорел на пляже
+        </label>
+        <label class="page-form__label page-form__label--less" for="ch-norris">
+          <input class="page-form__input" type="checkbox" name="norris" id="ch-norris"> Видел Чака Норриса
+        </label>
+        <label class="page-form__label page-form__label--less" for="gift">
+          <input class="page-form__input" type="checkbox" name="buy" id="gift"> Накупил сувениров
+        </label>
+        <label class="page-form__label page-form__label--less" for="pisa">
+          <input class="page-form__input" type="checkbox" name="hold" id="pisa" checked> Удержал башню
+        </label>
+        <label class="page-form__label page-form__label--less" for="hotel">
+          <input class="page-form__input" type="checkbox" name="destroy" id="hotel"> Разгромил отель
+        </label>
+      </div>
+      <div class="page-form__contacts">
+        <label class="page-form__label" for="phone">
+          номер телефона <input class="page-form__input" type="tel" id="phone" name="phone-number" placeholder="Номер, пожалуйста">
+        </label>
+        <label class="page-form__label" for="letter">
+          адрес почты <input class="page-form__input" type="email" id="letter" name="email" placeholder="Введите почту *" required>
+        </label>
+      </div>
+      <div class="page-form__app-os">
+        <h2 class="page-form__tagline">с каким приложением путешествовали?</h2>
+        <label class="page-form__label page-form__label--less" for="ios">
+          <input class="page-form__input" id="ios" type="radio" name="app-os" value="Pink для iOS" checked> Pink для iOS
+        </label>
+        <label class="page-form__label page-form__label--less" for="android">
+          <input class="page-form__input" id="android" type="radio" name="app-os" value="Pink на Android"> Pink на Android
+        </label>
+        <label class="page-form__label page-form__label--less" for="windows">
+          <input class="page-form__input" id="windows" type="radio" name="app-os" value="Windows Phone"> Windows Phone
+        </label>
+      </div>
+      <div class="page-form__comment">
+        <label class="page-form__tagline" for="emotional">опишите свои эмоции </label>
+        <textarea class="page-form__input" id="emotional" name="comment" rows="8">Можно прям в красках, не стесняясь в выражениях</textarea>
+      </div>
+      <input class="page-form__submit" type="submit" value="отправить форму">
+      <p class="page-form__legend"><sup>*</sup> — обязательные поля</p>
+      </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
