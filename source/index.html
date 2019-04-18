@@ -2,35 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Pink">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="" height="" alt="Приложение Pink">
       </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a>
-          Главная
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--active">
+          главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="photo.html">
-            Фотографии
+          <a class="site-list__link" href="photo.html">
+            фотографии
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
-            Конкурс
+          <a class="site-list__link" href="form.html">
+            конкурс
           </a>
         </li>
         <li class="site-list__item">
-          <a href="#">
-            HTML ACADEMY
+          <a class="site-list__link" href="#">
+            html academy
           </a>
         </li>
       </ul>
@@ -38,23 +44,24 @@
     </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Приложение Pink сделает ваши фото и жизнь ярче!</h1>
       <section class="application">
-        <h2 class="visually-hidden">Загрузка приложения</h2>
         <div class="application__wrapper">
-        <button class="application__download">Скачать приложение</button>
+        <div class="application__download">
+          <h2 class="application__title">Взгляни на жизнь иначе!</h2>
+        <a class="application__button button" href="#">Скачать приложение</a>
         <ul class="application__list">
           <li class="application__item">
-            <a class="application__link application__link--apple" href=""></a>
+            <a class="application__link application__link--apple" href="https://www.apple.com/itunes/"></a>
           </li>
           <li class="application__item">
-            <a class="application__link application__link--android" href=""></a>
+            <a class="application__link application__link--android" href="https://play.google.com/store/"></a>
           </li>
           <li class="application__item">
-            <a class="application__link application__link--windows" href=""></a>
+            <a class="application__link application__link--windows" href="https://www.microsoft.com/ru-RU/store/apps/"></a>
           </li>
         </ul>
         <p class="application__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
       </div>
       </section>
       <section class="advantages">
@@ -80,7 +87,7 @@
       </ul>
     </div>
     <div class="advantages__gallery">
-      <img class="advantages__gallery--smile" src="http://placehold.it/150x100" width="150" height="100" alt="smile">
+      <!--<img class="advantages__image advantages__image--smile" src="http://placehold.it/150x100" width="150" height="100" alt="smile">-->
     </div>
       </section>
       <section class="reviews">
