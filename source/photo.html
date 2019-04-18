@@ -2,35 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Pink">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="" height="" alt="Приложение Pink">
       </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a href="index.html">
-          Главная
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">
+          главная
+          </a>
+        </li>
+        <li class="site-list__item site-list__link--active">
+          <a class="site-list__link">
+            фотографии
           </a>
         </li>
         <li class="site-list__item">
-          <a>
-            Фотографии
+          <a class="site-list__link" href="photo.html">
+            конкурс
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
-            Конкурс
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a href="#">
-            HTML ACADEMY
+          <a class="site-list__link" href="#">
+            html academy
           </a>
         </li>
       </ul>
@@ -47,7 +53,7 @@
         </div>
       </div>
       <div class="panorama__comment">
-        <p class="panorama__autor">Анна<time class="panorama__time" datetime="2019-04-04">(5 минут назад)</time></p>
+        <p class="panorama__author">Анна <time class="panorama__time" datetime="2019-04-04">(5 минут назад)</time></p>
         <p class="panorama__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         <p class="panorama__like panorama__like--icon">Нравится: 215</p>
       </div>
@@ -57,7 +63,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Левон<time class="post-list__time" datetime="2019-04-04">(5 часов назад)</time></p>
+            <p class="post-list__author">Левон <time class="post-list__time" datetime="2019-04-04">(5 часов назад)</time></p>
             <p class="post-list__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <p class="post-list__like post-list__like--icon">Нравится: 356</p>
           </div>
@@ -67,7 +73,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Антон<time class="post-list__time" datetime="2019-04-04">(12 часов назад)</time></p>
+            <p class="post-list__author">Антон <time class="post-list__time" datetime="2019-04-04">(12 часов назад)</time></p>
             <p class="post-list__description">Соседи будут рады!</p>
             <p class="post-list__like post-list__like--icon">Нравится: 666</p>
           </div>
@@ -77,7 +83,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Борис<time class="post-list__time" datetime="2019-04-04">(20 часов назад)</time></p>
+            <p class="post-list__author">Борис<time class="post-list__time" datetime="2019-04-04">(20 часов назад)</time></p>
             <p class="post-list__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
             <p class="post-list__like post-list__like--icon">Нравится: 215</p>
           </div>
@@ -87,7 +93,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Сергей<time class="post-list__time" datetime="2019-04-04">(25 часов назад)</time></p>
+            <p class="post-list__author">Сергей<time class="post-list__time" datetime="2019-04-04">(25 часов назад)</time></p>
             <p class="post-list__description">Самая кубанская в мире!</p>
             <p class="post-list__like post-list__like--icon">Нравится: 4</p>
           </div>
@@ -97,7 +103,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Максим<time class="post-list__time" datetime="2019-04-04">(40 часов назад)</time></p>
+            <p class="post-list__author">Максим<time class="post-list__time" datetime="2019-04-04">(40 часов назад)</time></p>
             <p class="post-list__description">Где снег-то?</p>
             <p class="post-list__like post-list__like--icon">Нравится: 150</p>
           </div>
@@ -107,7 +113,7 @@
         <a class="post-list__link">
           <img class="post-list__image" src="http://placehold.it/150x100" width="150" height="100" alt="Фото пользователя">
           <div class="post-list__comment">
-            <p class="post-list__autor">Надежда<time class="post-list__time" datetime="2019-04-04">(45 часов назад)</time></p>
+            <p class="post-list__author">Надежда<time class="post-list__time" datetime="2019-04-04">(45 часов назад)</time></p>
             <p class="post-list__description">Всем GM и взаимные лайки!</p>
             <p class="post-list__like post-list__like--icon">Нравится: 2560</p>
           </div>
@@ -139,8 +145,8 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <p class="copyright__text">Разработано
+        <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a></p>
     </div>
     </footer>
   </body>

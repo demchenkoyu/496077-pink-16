@@ -1,0 +1,30 @@
+.site-list {
+  padding: inherit;
+  margin: inherit;
+}
+
+.site-list__item {
+  list-style: none;
+  /*height: 62px;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;*/
+  text-align: center;
+}
+
+.site-list__link {
+  font-size: 18px;
+  line-height: 27,495px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @white;
+  &:hover {
+    color: @pink;
+  }
+  &:active {
+    color: desaturate(@white, 70%);
+  }
+  &--active {
+    text-decoration: underline;
+  }
+}
