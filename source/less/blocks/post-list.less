@@ -1,4 +1,8 @@
 .post-list {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
   list-style: none;
   padding: 0;
 }
@@ -6,6 +10,7 @@
 .post-list__comment {
   background-color: @bg-color-grey;
 }
+
 .post-list__author {
   font-weight: bold;
 }
@@ -17,4 +22,23 @@
 
 .post-list__like {
   color: @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .post-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .post-list__item {
+    display: flex;
+    width: 300px;
+  }
+
+  .post-list__link {
+    display: block;
+  }
 }

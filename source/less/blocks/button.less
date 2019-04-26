@@ -2,20 +2,22 @@
   display: block;
   height: 49px;
   width: 280px;
-  margin: 0 20px;
-  background-color: @dark-blue;
+  background-color: transparent;
   border: 3px solid @white;
-  /*border-radius: 30px;*/
+  border-radius: 30px;
   color: @white;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  box-sizing: border-box;
+
   &:hover {
     background-color: @white;
     color: @pink;
   }
+
   &:active {
     background-color: @white;
     color: desaturate(@pink, 40%);
