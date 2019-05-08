@@ -2,22 +2,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-weight: bold;
 }
 
 .site-list__item {
-  height: 62px;
-  border-top: 1px solid #485461;
-  border-bottom: 1px solid #000000;
   text-align: center;
 }
 
 .site-list__item a {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 14px;
   font-size: 18px;
-  line-height: 62px;
-  font-weight: bold;
+  line-height: 32px;
+  color: @white;
   text-transform: uppercase;
   text-decoration: none;
-  color: @white;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
 
   &:hover {
     color: @pink;
@@ -32,15 +34,36 @@
   }
 }
 
+// .site-list a[href] {
+//   &:hover {
+//     background-color: #755a46;
+//     border-top-color: #755a46;
+//   }
+//
+//   &:active {
+//     color: rgba(255, 255, 255, 0.3);
+//     background-color: #6a4d38;
+//     border-top-color: #6a4d38;
+//   }
+// }
+
+@media (max-width: @only-mobile-tablet) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .site-list__item {
     height: 110px;
+    //выставить высоту блока паддингами, хейт убрать
     border-top: 0;
     border-bottom: 0;
   }
 
   .site-list__item a {
     line-height: 110px;
+    //выставить высоту блока паддингами, хейт убрать
     font-weight: normal;
     text-transform: none;
   }

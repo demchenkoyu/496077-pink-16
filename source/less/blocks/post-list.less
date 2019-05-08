@@ -7,21 +7,94 @@
   padding: 0;
 }
 
-.post-list__comment {
+.post-list__item {
   background-color: @bg-color-grey;
+  margin-top: 20px;
+}
+
+.post-list__link {
+  display: block;
+}
+
+.post-list__image {
+  &--panorama {
+    width: 320px;
+    height: 137px;
+    position: relative;
+    background-image: url("../img/panorama-mobile@1x.jpg");
+    background-repeat: no-repeat;
+
+    &::after {
+      content: "панорама дня";
+      position: absolute;
+      display: block;
+      color: @white;
+      text-align: center;
+      font-size: 12px;
+      line-height: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: @pink;
+      width: 140px;
+      height: 36px;
+      left: 160px;
+    }
+  }
+}
+
+.post-list__comment {
+  margin-top: -10px;
+  padding-left: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+
+  &--panorama {
+    width: 280px;
+    margin: 0 auto;
+    background-color: @bg-color-grey;
+  }
 }
 
 .post-list__author {
   font-weight: bold;
+  margin: 0;
+  padding-top: 18px;
 }
 
 .post-list__time {
+  font-size: 12px;
   font-weight: lighter;
   text-transform: uppercase;
 }
 
+.post-list__description {
+  margin: 0;
+  line-height: 24px;
+}
+
 .post-list__like {
+  position: relative;
   color: @pink;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 19px;
+
+  &--icon::before {
+    content: "";
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 14px;
+    height: 12px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -29,16 +102,51 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 600px;
+    width: 620px;
     margin: 0 auto;
   }
 
   .post-list__item {
     display: flex;
+    flex-direction: column;
     width: 300px;
   }
 
-  .post-list__link {
-    display: block;
+  .post-list__image {
+    &--panorama {
+      width: 660px;
+      height: 509px;
+      // есть ли способ не указывать хейт?
+      background-image: url("../img/panorama-tablet@1x.jpg");
+      background-repeat: no-repeat;
+
+      &::after {
+        left: 500px;
+        top: 57px;
+      }
+    }
+  }
+
+  .post-list__comment {
+    padding: 0 29px;
+
+    &--panorama {
+      width: 620px;
+      position: relative;
+    }
+  }
+
+  .post-list__author {
+    padding-top: 29px;
+  }
+
+  .post-list__like {
+    padding-bottom: 29px;
+
+    &--panorama {
+      position: absolute;
+      right: 60px;
+      top: 25px;
+    }
   }
 }

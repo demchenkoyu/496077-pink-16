@@ -3,3 +3,12 @@
   line-height: 30px;
   font-weight: bold;
 }
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}

@@ -1,14 +1,37 @@
-.reviews__author-name {
-  display: block;
-  color: black;
+.reviews__list {
+  margin: 0 20px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+
+  &--two,
+  &--three {
+    display: none;
+  }
+}
+
+.reviews__author {
   font-size: 18px;
   line-height: 30px;
+  color: black;
   font-weight: bold;
-  text-align: center;
+  font-style: normal;
+}
+
+.reviews__info {
+  display: none;
 }
 
 .reviews__text {
-  .tagline();
-  color: @dark-blue;
-  text-align: center;
+  margin: 0;
+}
+
+.reviews__prev,
+.reviews__next {
+  display: none;
 }

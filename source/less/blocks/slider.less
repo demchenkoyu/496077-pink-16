@@ -1,1 +1,34 @@
-// слайдер
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56px;
+  margin: 0 auto;
+}
+
+.slider__toggle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #bec2c7;
+  box-sizing: content-box;
+
+  &--active {
+    width: 7px;
+    height: 7px;
+    border: 2px solid @blue;
+  }
+
+  &:hover {
+    background-color: #7e868f;
+    border: 1px solid #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+    border: 1px solid #e9ebec;
+  }
+}

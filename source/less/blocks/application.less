@@ -1,10 +1,13 @@
 .application {
+  width: 320px;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-color: #2b3b4b;
-  background-position: 0 176px, 50% 0%;
+  // background-position: 0 110px, 50% -32%;
+  background-position: 0 178px, 50% 1%;
   background-repeat: no-repeat;
-  background-size: contain, cover;
-  padding-top: 400px;
+  // padding-top: 395px;
+  padding-top: 462px;
+  margin: auto;
 }
 
 .application__title {
@@ -23,18 +26,26 @@
   margin: 0 auto;
 }
 
+.application__button {
+  margin-top: 28px;
+}
+
+.application__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0 38px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
 .application__description {
-  margin: 0 20px;
+  margin-bottom: 28px;
   color: @white;
   font-size: 14px;
   line-height: 24px;
   font-weight: lighter;
   text-align: center;
-}
-
-.application__list {
-  display: flex;
-  list-style-type: none;
 }
 
 .application__link {
@@ -63,34 +74,81 @@
 
 @media (min-width: @tablet-width) {
   .application {
-    min-width: @tablet-width;
+    width: @tablet-width;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: -20px 73px, 50% 100%;
     padding-top: 0;
   }
 
   .application__wrapper {
-    min-width: @tablet-width;
     background-color: transparent;
   }
 
   .application__title {
     display: block;
     font-size: 40px;
+    line-height: 50px;
     color: @white;
     font-weight: lighter;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 90px;
   }
 
   .application__download {
     width: 300px;
     margin-left: 20px;
   }
+
+  .application__button {
+    width: 100%;
+  }
+
+  .application__list {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    padding: 0 45px;
+  }
+
+  .application__description {
+    margin-bottom: 110px;
+    font-size: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .application {
-    min-width: @desktop-width;
+    min-width: 100%;
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: 145px 110px, 50% 100%;
   }
 
   .application__wrapper {
-    min-width: @desktop-width;
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .application__download {
+    margin-left: 10px;
+  }
+
+  .application__title {
+    font-size: 50px;
+    padding-top: 130px;
+    line-height: 55px;
+  }
+
+  .application__button {
+    margin-top: 58px;
+  }
+
+  .application__list {
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .application__description {
+    margin-bottom: 120px;
   }
 }
