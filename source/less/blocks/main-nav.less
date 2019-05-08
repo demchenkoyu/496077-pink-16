@@ -13,7 +13,6 @@
   display: block;
   width: 50px;
   height: 66px;
-  background-color: @blue;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -40,6 +39,7 @@
   top: -66px;
   right: 20px;
   left: auto;
+
   &::before,
   &::after {
     content: "";
@@ -70,22 +70,23 @@
 }
 
 .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .main-nav {
     width: @tablet-width;
   }
 
-  .main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
     top: 10px;
     left: 23px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__list{
+  .main-nav__list {
     width: 620px;
     display: flex;
     justify-content: space-between;
