@@ -1,6 +1,9 @@
 .page-header {
-  background-color: @blue;
-  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: -70px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .page-header__wrapper {
@@ -8,9 +11,13 @@
   flex-direction: column;
 }
 
+// .page-header__wrap--show {
+//   background-color: @blue;
+// }
+
 .page-header__logo {
-  height: 69px;
-  //border-bottom: 1px solid black;
+  height: 70px;
+  // добавить паддинг топ линию и тогда высота 69
 }
 
 .page-header__logo-image {
@@ -20,18 +27,19 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    min-width: @tablet-width;
+    width: @tablet-width;
   }
 
   .page-header__logo {
     height: 110px;
+    // добавить бордер 1пх тогда хейт 109
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    min-width: @desktop-width;
-    height: 110px;
+    width: 100%;
+    height: 109px;
   }
 
   .page-header__wrapper {
@@ -39,6 +47,8 @@
     width: @desktop-width;
     justify-content: space-between;
     margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .page-header__logo-image {

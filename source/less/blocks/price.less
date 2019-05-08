@@ -1,1 +1,109 @@
-// здесь будет цена
+.price {
+  background-color: @bg-color-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  overflow: hidden;
+}
+
+
+.price__table {
+  display: table;
+  margin: auto;
+  position: relative;
+  width: 840px;
+  right: 260px;
+}
+
+.price__option {
+  list-style: none;
+  padding: 0;
+  display: table-row;
+}
+
+.price__item {
+  position: relative;
+  display: table-cell;
+  width: 280px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  padding-left: 23px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: @white;
+  border: 1px solid #e5e5e5;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 27px;
+    display: block;
+    left: 230px;
+    top: 14px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &--yes::after {
+    background-image: url("../img/icon-yes.svg");
+  }
+
+  &--no::after {
+    background-image: url("../img/icon-no.svg");
+  }
+
+  &--hit {
+    position: relative;
+    background-image: url("../img/bg-hit.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    &::before {
+      position: absolute;
+      left: 10px;
+      top: 12px;
+      content: "хит";
+      display: block;
+      font-size: 14px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--empty,
+  &--none {
+    display: none;
+  }
+
+  &--header {
+    text-align: center;
+    color: @white;
+    background-color: @blue;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+}
+
+.price__tariff-tagline {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price__tariff {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.price__column {
+  display: table-column;
+}

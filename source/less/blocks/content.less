@@ -1,8 +1,25 @@
+.content {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.content__intro {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: #2b3b4b;
+  background-repeat: no-repeat;
+  background-position: 50% -68px;
+}
+
 .content__title {
-  background-color: @blue;
+  display: block;
+  width: 280px;
   font-size: 24px;
   font-weight: lighter;
   color: @white;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 82px;
+  padding-top: 29px;
 }
 
 .content__text {
@@ -10,4 +27,25 @@
   line-height: 30px;
   color: @blue;
   text-align: center;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 49px;
+}
+
+@media (min-width: @tablet-width) {
+  .content {
+    width: @tablet-width;
+  }
+
+  .content__title {
+    font-size: 50px;
+    padding: 0 20px;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .content__text {
+    font-size: 18px;
+    padding: 84px 50px;
+  }
 }

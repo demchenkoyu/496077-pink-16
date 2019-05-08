@@ -1,1 +1,66 @@
-// здесь будут контакты
+.contacts {
+}
+
+.contacts__header {
+  width: 280px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.contacts__list {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__item {
+  text-align: center;
+}
+
+.contacts__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.contacts__type {
+  text-decoration: none;
+  color: @pink;
+  font-size: 24px;
+  font-weight: lighter;
+
+  &--email:hover {
+    text-decoration: underline;
+    color: @blue;
+  }
+
+  &--email:active {
+    text-decoration: none;
+    color: @blue;
+    opacity: 0.7;
+  }
+}
+
+.contacts__map {
+  width: 320px;
+  height: 200px;
+  position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 95px;
+    background-size: contain;
+    background-position: 0 -1px;
+  }
+}
