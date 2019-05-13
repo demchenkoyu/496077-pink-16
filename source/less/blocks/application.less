@@ -2,12 +2,15 @@
   width: 320px;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-color: #2b3b4b;
-  // background-position: 0 110px, 50% -32%;
   background-position: 0 178px, 50% 1%;
   background-repeat: no-repeat;
-  // padding-top: 395px;
-  padding-top: 462px;
+  padding-top: 465px;
   margin: auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+    background-size: 258px auto, 320px auto;
+  }
 }
 
 .application__title {
@@ -20,10 +23,10 @@
 }
 
 .application__download {
-  display: flex;
-  flex-direction: column;
   width: 280px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .application__button {
@@ -36,11 +39,11 @@
   list-style-type: none;
   padding: 0 38px;
   margin-top: 32px;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .application__description {
-  margin-bottom: 28px;
+  margin-bottom: 31px;
   color: @white;
   font-size: 14px;
   line-height: 24px;
@@ -76,8 +79,14 @@
   .application {
     width: @tablet-width;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: -20px 73px, 50% 100%;
-    padding-top: 0;
+    background-position: -20px 142px, 50% 100%;
+    padding-top: 70px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+      background-size: 700px auto, 1197px auto;
+    }
+
   }
 
   .application__wrapper {
@@ -118,9 +127,15 @@
 
 @media (min-width: @desktop-width) {
   .application {
+    padding-top: 101px;
     min-width: 100%;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-position: 145px 110px, 50% 100%;
+    background-position: 97% 100%, 50% 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+      background-size: 87% 76%, cover;
+    }
   }
 
   .application__wrapper {
@@ -141,6 +156,7 @@
 
   .application__button {
     margin-top: 58px;
+    font-size: 21px;
   }
 
   .application__list {
