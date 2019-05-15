@@ -14,9 +14,13 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="" height="" alt="Приложение Pink">
-      </a>
+        <a class="page-header__logo">
+    <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+        <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="78" height="23" alt="Приложение Pink">
+      </picture>
+        </a>
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
@@ -49,9 +53,10 @@
         <div class="form__intro">
       <h1 class="form__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
-      <p class="form__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+      <p class="form__description">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!
+      <span class="form__description--hide">Пожалуйста, заполните форму ниже:</span></p>
       <form class="form__wrapper" action="https://echo.htmlacademy.ru">
-      <div class="form__item">
+      <div class="form__item form__item--name container">
         <div class="form__field">
         <label class="form__label" for="surname">фамилия:</label>
         <input class="form__input" type="text" id="surname" placeholder="Укажите фамилию *" required>
@@ -65,8 +70,9 @@
         <input class="form__input" type="text" id="secondname" placeholder="Ну и отчество тоже">
       </div>
       </div>
-      <div class="form__item form__item--difference">
-        <h2 class="form__tagline">ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h2>
+      <div class="form__item form__item--checkbox">
+        <h2 class="form__tagline form__tagline--checkbox">ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h2>
+        <!-- <div class="container"> -->
         <div class="form__field form__field--checkbox">
           <input class="visually-hidden" type="checkbox" name="selfie-shark" id="selfie" value="Селфи" checked>
           <label class="form__checkbox" for="selfie">Сделал селфи с акулой</label>
@@ -91,20 +97,22 @@
           <input class="visually-hidden" type="checkbox" name="destroy" id="hotel" value="Отель">
           <label class="form__checkbox" for="hotel">Разгромил отель</label>
         </div>
+      <!-- </div> -->
       </div>
-      <div class="form__item">
+      <div class="form__item form__item--contacts container">
+        <h2 class="form__tagline form__tagline--contacts">контактная информация</h2>
       <div class="form__field form__field--tel">
-        <label class="form__label" for="phone">номер телефона</label>
-        <input class="form__input" type="tel" id="phone" name="phone-number" placeholder="Номер, пожалуйста">
+        <label class="form__label form__label--contacts" for="phone">номер телефона</label>
+        <input class="form__input form__input--contacts" type="tel" id="phone" name="phone-number" placeholder="Номер, пожалуйста">
       </div>
       <div class="form__field form__field--email">
-        <label class="form__label" for="letter">адрес почты</label>
-        <input class="form__input" type="email" id="letter" name="email" placeholder="Введите почту *" required>
+        <label class="form__label form__label--contacts" for="letter">адрес почты</label>
+        <input class="form__input form__input--contacts" type="email" id="letter" name="email" placeholder="Введите почту *" required>
       </div>
       </div>
-      <div class="form__item form__item--difference">
-        <h2 class="form__tagline">с каким приложением путешествовали?</h2>
-        <div class="form__app-os">
+      <div class="form__item form__item--os">
+        <h2 class="form__tagline form__tagline--os">с каким приложением путешествовали?</h2>
+        <div class="form__app-os container">
           <input class="visually-hidden" id="ios" type="radio" name="app-os" value="Pink для iOS" checked>
           <label class="form__radio" for="ios">Pink для iOS</label>
           <input class="visually-hidden" id="android" type="radio" name="app-os" value="Pink на Android">
@@ -113,11 +121,11 @@
           <label class="form__radio" for="windows">Windows Phone</label>
         </div>
       </div>
-      <div class="form__item form__item--comment">
-        <label class="form__tagline" for="emotional">опишите свои эмоции </label>
+      <div class="form__item form__item--comment container">
+        <label class="form__tagline form__tagline--comment" for="emotional">опишите свои эмоции </label>
         <textarea class="form__textarea" id="emotional" name="comment" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </div>
-      <div class="form__submit">
+      <div class="form__submit container">
       <button class="form__button" type="submit">отправить форму</button>
       <p class="form__legend"><sup>*</sup> &mdash; обязательные поля</p>
     </div>
