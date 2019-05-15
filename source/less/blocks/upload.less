@@ -1,1 +1,38 @@
-// аплоад
+.upload {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.upload__intro {
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.upload__tagline {
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .upload {
+    width: @tablet-width;
+  }
+
+  .upload__intro {
+    padding-top: 64px;
+  }
+
+  .upload__tagline {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .upload {
+    width: @desktop-width;
+  }
+
+  .upload__intro {
+    padding-top: 24px;
+  }
+}

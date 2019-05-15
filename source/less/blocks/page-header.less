@@ -14,10 +14,10 @@
 // .page-header__wrap--show {
 //   background-color: @blue;
 // }
-
 .page-header__logo {
-  height: 70px;
-  // добавить паддинг топ линию и тогда высота 69
+  height: 69px;
+  border-bottom: 1px solid black;
+  background-color: @blue;
 }
 
 .page-header__logo-image {
@@ -31,24 +31,34 @@
   }
 
   .page-header__logo {
-    height: 110px;
-    // добавить бордер 1пх тогда хейт 109
+    height: 109px;
+  }
+
+  .page-header__logo-image {
+    width: 150px;
+    height: 43px;
+    padding-top: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: 100%;
-    height: 109px;
+    height: 110px;
+    margin-bottom: -110px;
   }
 
   .page-header__wrapper {
     flex-direction: row;
-    width: @desktop-width;
+    width: 940px;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 10px;
     box-sizing: border-box;
+  }
+
+  .page-header__logo {
+    background: transparent;
+    border: 0;
   }
 
   .page-header__logo-image {

@@ -1,4 +1,7 @@
 .price {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 90px;
   background-color: @bg-color-grey;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
@@ -7,13 +10,12 @@
   overflow: hidden;
 }
 
-
 .price__table {
   display: table;
   margin: auto;
   position: relative;
   width: 840px;
-  right: 260px;
+  right: 280px;
 }
 
 .price__option {
@@ -26,8 +28,8 @@
   position: relative;
   display: table-cell;
   width: 280px;
-  padding-top: 16px;
-  padding-bottom: 13px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 23px;
   font-size: 14px;
   line-height: 30px;
@@ -104,6 +106,130 @@
   font-weight: normal;
 }
 
-.price__column {
-  display: table-column;
+.price__toggles {
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    width: @tablet-width;
+    padding-bottom: 70px;
+    margin-top: -22px;
+  }
+
+  .price__table {
+    width: 100%;
+    right: 0;
+  }
+
+  .price__item {
+    width: 120px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+
+    &::after {
+      left: 62px;
+      top: 7px;
+    }
+
+    &--empty {
+      display: table-cell;
+      background: transparent;
+      border-top: 0;
+      border-left: 0;
+    }
+
+    &--none {
+      display: table-cell;
+      font-size: 14px;
+      text-transform: none;
+    }
+
+    &--header {
+      padding-top: 12px;
+      padding-bottom: 10px;
+      padding-left: 0;
+    }
+
+    &--hit {
+      background-position: -14px 0;
+    }
+
+    &--hit::before {
+      left: 7px;
+      top: 3px;
+    }
+  }
+
+  .price__tariff-tagline {
+    font-size: 16px;
+  }
+
+  .price__tariff {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: -4px;
+  }
+
+  .price__item-text {
+    opacity: 0;
+    font-size: 0;
+  }
+
+  .price__toggles-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    width: 100%;
+    margin-top: -58px;
+    padding-bottom: 96px;
+  }
+
+  .price__table {
+    padding-top: 63px;
+  }
+
+  .price__item {
+    padding-top: 13px;
+    padding-bottom: 9px;
+    padding-left: 21px;
+
+    &::after {
+      left: 99px;
+      top: 15px;
+    }
+
+    &--header {
+      padding-top: 15px;
+      padding-bottom: 21px;
+      padding-left: 0;
+    }
+
+    &--none {
+      font-size: 18px;
+    }
+
+    &--hit {
+      background-position: -2px 0;
+    }
+
+    &--hit::before {
+      left: 8px;
+      top: 10px;
+    }
+  }
+
+  .price__tariff-tagline {
+    font-size: 18px;
+  }
+
+  .price__tariff {
+    font-size: 24px;
+    margin-top: 0;
+  }
 }
