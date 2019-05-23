@@ -1,1 +1,51 @@
-// сошиал)
+.social__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  width: 179px;
+  justify-content: space-between;
+}
+
+.social__item {
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-top: 18px;
+
+  &--youtube {
+    margin-left: -3px;
+  }
+
+  &--facebook {
+    margin-left: -3px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid @blue;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid rgba(40, 54, 69, 0.1);
+    outline: none;
+  }
+
+  &:active .social__icon {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.social__icon {
+  padding-top: 16px;
+  padding-left: 16px;
+  fill: @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .social__item {
+    margin-top: 44px;
+  }
+}

@@ -1,0 +1,167 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: 320px;
+  margin: 0 auto;
+  z-index: 20;
+  text-align: center;
+  background-color: @white;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+
+  &--show {
+   display: block;
+ }
+
+ &--error {
+   top: 25%;
+   left: 50%;
+   padding-top: 24px;
+   padding-bottom: 50px;
+   transform: translate(-50%, -25%);
+ }
+
+
+ &--success {
+   top: 75%;
+   left: 50%;
+   padding-top: 20px;
+   padding-bottom: 0;
+   transform: translate(-50%, -75%);
+ }
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+
+  &--error {
+    margin-bottom: 29px;
+}
+
+  &--success {
+    margin-bottom: 27px;
+  }
+}
+
+.modal__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: @blue;
+
+  &--error {
+    margin-bottom: 39px;
+  }
+
+  &--success {
+    margin-bottom: 31px;
+  }
+}
+
+.modal__inner {
+  padding-top: 48px;
+  padding-bottom: 50px;
+  background-color: @bg-color-grey;
+}
+
+.modal__btn {
+  width: 280px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  cursor: pointer;
+
+  &--success {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 460px;
+  }
+
+  .modal .container {
+    width: 310px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+
+    &--error {
+      margin-bottom: 22px;
+    }
+
+    &--success {
+      margin-bottom: 20px;
+    }
+  }
+
+  .modal__text {
+    font-size: 18px;
+    line-height: 24px;
+
+    &--success {
+      margin-bottom: 33px;
+    }
+  }
+
+  .modal__inner {
+    padding-bottom: 53px;
+  }
+
+  .modal__btn {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    width: 780px;
+  }
+
+  .modal {
+    &--error {
+      padding-top: 5px;
+    }
+
+    &--success {
+      width: 780px;
+      padding-top: 10px;
+    }
+  }
+
+  .modal .container {
+    width: 400px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+
+    &--error {
+      margin-bottom: 22px;
+    }
+
+    &--success {
+      margin-bottom: 23px;
+    }
+  }
+
+  .modal__text {
+    &--error {
+      margin-bottom: 37px;
+    }
+
+    &--success {
+      margin-bottom: 38px;
+    }
+  }
+
+  .modal__btn--success {
+    width: 460px;
+  }
+}
