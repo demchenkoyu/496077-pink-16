@@ -157,7 +157,7 @@
   cursor: pointer;
 }
 
-.upload__input::-moz-range-thumb:active{
+.upload__input::-moz-range-thumb:active {
   background-color: #d22856;
 }
 
@@ -192,7 +192,7 @@
   cursor: pointer;
 }
 
-.upload__input::-ms-thumb:active{
+.upload__input::-ms-thumb:active {
   background-color: #d22856;
 }
 
@@ -211,29 +211,30 @@
 .upload__button {
   margin-bottom: 12px;
   margin: 0 auto;
+}
 
-  &--post {
-    border-color: @pink;
-    color: @pink;
-    margin-top: 38px;
-    margin-bottom: 13px;
+.upload__button--post {
+  border-color: @pink;
+  color: @pink;
+  margin-top: 38px;
+  margin-bottom: 13px;
 
-    &:hover {
-      background-color: @pink;
-      color: @white;
-    }
-
-    &:focus {
-      background-color: @pink;
-      color: @white;
-      outline: none;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      outline: none;
-    }
+  &:hover {
+    background-color: @pink;
+    color: @white;
   }
+
+  &:focus {
+    background-color: @pink;
+    color: @white;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+}
 
   &--cancel {
     color: @blue;
