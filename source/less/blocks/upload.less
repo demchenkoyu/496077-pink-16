@@ -236,29 +236,28 @@
   }
 }
 
-  &--cancel {
+.upload__button--cancel {
+  color: @blue;
+  border-color: @blue;
+  opacity: 0.1;
+  margin-bottom: 20px;
+
+  &:hover {
     color: @blue;
     border-color: @blue;
-    opacity: 0.1;
-    margin-bottom: 20px;
+    opacity: 0.3;
+  }
 
-    &:hover {
-      color: @blue;
-      border-color: @blue;
-      opacity: 0.3;
-    }
+  &:focus {
+    opacity: 0.3;
+    outline: none;
+  }
 
-    &:focus {
-      opacity: 0.3;
-      outline: none;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: @blue;
-      opacity: 0.3;
-      outline: none;
-    }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue;
+    opacity: 0.3;
+    outline: none;
   }
 }
 
