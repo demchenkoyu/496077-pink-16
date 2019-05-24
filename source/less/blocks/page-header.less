@@ -3,7 +3,6 @@
   margin: 0 auto;
   position: relative;
   margin-bottom: -70px;
-
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -18,9 +17,24 @@
   background-color: @blue;
 }
 
-.page-header__logo-image {
+.page-header__logo svg {
   padding-left: 20px;
   padding-top: 22px;
+  max-width: 100%;
+  height: auto;
+
+  &:hover {
+    path {
+      fill: @pink;
+    }
+  }
+
+  &:active {
+    path {
+      fill: @white;
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -33,7 +47,7 @@
     height: 109px;
   }
 
-  .page-header__logo-image {
+  .page-header__logo svg {
     width: 150px;
     height: 43px;
     padding-top: 25px;
@@ -66,7 +80,7 @@
     border: 0;
   }
 
-  .page-header__logo-image {
+ .page-header__logo svg {
     padding-left: 0;
   }
 }
