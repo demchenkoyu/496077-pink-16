@@ -60,7 +60,7 @@
 
   &:hover .upload__icon {
     fill: @blue;
-    opacity: 0.5
+    opacity: 0.5;
   }
 
   &:focus .upload__icon {
@@ -85,7 +85,6 @@
 }
 
 .upload__input {
-  -webkit-appearance: none;
   width: 100%;
   height: 17px;
   background: transparent;
@@ -108,7 +107,7 @@
   cursor: pointer;
   background: #283645;
   border-radius: 0px;
-  border: 0px solid #010101;
+  border: 0 solid #010101;
 }
 
 .upload__input::-webkit-slider-thumb {
@@ -118,7 +117,6 @@
   border-radius: 50px;
   background: #f2f2f2;
   cursor: pointer;
-  -webkit-appearance: none;
   margin-top: -6px;
 }
 
@@ -129,7 +127,7 @@
   padding-bottom: 26px;
 }
 
-.upload__input::-webkit-slider-thumb:active{
+.upload__input::-webkit-slider-thumb:active {
   -webkit-appearance: none;
   background-color: #d22856;
 }
@@ -270,6 +268,7 @@
       }
     }
   }
+
   .upload__input {
     border-bottom: none;
     width: 201px;
@@ -294,7 +293,7 @@
   }
 
   .upload__toggle::after {
-    content: '';
+    content: "";
     display: block;
     width: 272px;
     padding-top: 20px;
@@ -349,6 +348,7 @@
   .upload__controls {
     padding-bottom: 79px;
   }
+
   .upload__toggle {
     width: 50px;
 
@@ -366,8 +366,8 @@
 
     &--contrast {
       width: 33px;
-    margin-top: -22px;
-    padding-left: 9px;
+      margin-top: -22px;
+      padding-left: 9px;
     }
   }
 
