@@ -89,14 +89,14 @@ gulp.task("clean", function () {
 
 gulp.task("copy", function () {
  return gulp.src([
- "source/fonts/**/*.{woff,woff2}",
- "source/img/**",
- "source/js/**",
- "source/*.ico"
- ], {
- base: "source"
- })
- .pipe(gulp.dest("build"));
+  "source/fonts/**/*.{woff,woff2}",
+  "source/img/**",
+  "source/js/**",
+  "source/*.ico"
+  ], {
+  base: "source"
+  })
+  .pipe(gulp.dest("build"));
 });
 
 gulp.task("build", gulp.series( "clean", "copy", "css", "sprite", "html" ));
